@@ -1,0 +1,22 @@
+——打包方法——
+一.创建虚拟环境
+
+打开cmd
+
+
+1.安装pip3 install virtualenv
+2.在C盘建个新文件夹，cd进去（cd 绝对路径）
+3.创建（virtualenv 名称随意取(英文)）
+4.进去2中的Scripts文件路径复制，如：C:\data\env_django\Scripts
+5.cd进入Scripts文件路径
+6.打开虚拟环境activate
+7.把打包需要的库给装上，pip install 库名
+8.最后cd到你要打包的文件中
+
+
+二.打包
+1.单个py文件，没有额外数据包：pyinstaller -F 文件.py
+
+2.有额外数据的py文件 ：pyinstaller -F -D 文件.py  ，将数据包拖进打好包后的exe文件中（不拖会闪退）
+
+  改exe的图标  :  pyinstaller -F -D -i 图片.ico 文件.py
